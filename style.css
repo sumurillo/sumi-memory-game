@@ -5,22 +5,36 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    margin: 0;
+    height: 100vh;
 }
 
 h1 {
-    color: brown;
+    color: purple;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#button1, #button2 {
+    display: inline;
 }
 
 #board {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: aqua;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat(100px, auto); 
 }
 
 #board > div{
     color: green;
+    border: 2px solid black;
+    height: 200px;
+    width: 150px;
+    margin: 10px;
 }
