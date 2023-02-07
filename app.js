@@ -20,22 +20,22 @@ const gameArr = [
     [card9, card10, card11, card12]
 ];
 
+let choices = [1, 2, 3, 4, 5, 6];
+
 /*----- cached element references -----*/
 
-const boardEl = document.getElementById('board');
-const startButton = document.getElementById('button1');
 
-startButton.addEventListener('click', countdown);
+// const boardEl = document.getElementById('board');
+const startBtn = document.getElementById('button1');
+const resetBtn = document.getElementById('button2');
 
-let choices = [1, 2, 3, 4, 5, 6];
+
+startBtn.addEventListener('click', countdown);
+// resetBtn.addEventListener('click', resetTimer);
 
 /*----- functions -----*/
 
-// for (let i = 0; i < Math.floor(Math.random() * 2); i++) {
-//     choices++;
-// }
 
-// console.log(choices)
 
 
 //timer cited from stack overflow by James McDowell
@@ -48,3 +48,4 @@ function countdown() {
 		setTimeout(countdown, 1000);
 	}
 };
+
