@@ -23,7 +23,6 @@ let choices = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]; //choices to match
 
 let gameArr = [];
 
-
 /*----- cached element references -----*/
 
 
@@ -33,6 +32,45 @@ startBtn.addEventListener('click', countdown);
 // resetBtn.addEventListener('click', resetTimer);
 
 /*----- functions -----*/
+
+	
+card1.onclick = function() {
+	card1.style.backgroundColor = "red";
+}
+card2.onclick = function() {
+	card2.style.backgroundColor = "red";
+}
+card3.onclick = function() {
+	card3.style.backgroundColor = "purple";
+}
+card4.onclick = function() {
+	card4.style.backgroundColor = "purple";
+}
+card5.onclick = function() {
+	card5.style.backgroundColor = "blue";
+}
+card6.onclick = function() {
+	card6.style.backgroundColor = "blue";
+}
+card7.onclick = function() {
+	card7.style.backgroundColor = "green";
+}
+card8.onclick = function() {
+	card8.style.backgroundColor = "green";
+}
+card9.onclick = function() {
+	card9.style.backgroundColor = "orange";
+}
+card10.onclick = function() {
+	card10.style.backgroundColor = "orange";
+}
+card11.onclick = function() {
+	card11.style.backgroundColor = "aqua";
+}
+card12.onclick = function() {
+	card12.style.backgroundColor = "aqua";
+}
+
 
 //shuffle array function
 function shuffle(choices) {
