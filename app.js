@@ -40,10 +40,8 @@ let gameArr = [];
 
 /*----- cached element references -----*/
 
-
-
-
 startBtn.addEventListener('click', countdown);
+
 
 /*----- functions -----*/
 
@@ -101,7 +99,7 @@ function shuffle(cards) {
 	return cards;
   }
 
-	shuffle(cardsMatch);
+	shuffle(choices);
 	gameArr.push(choices);
 	console.log(gameArr);
 
@@ -117,8 +115,8 @@ function countdown() {
 };
 
 //reset timer
-button2.onClick(
-    clearTimeout(timeLeft);
-    timeLeft = setTimeout(countdown(){}, 1000);
-);
+// button2.onClick(
+//     clearTimeout(timeLeft);
+//     timeLeft = setTimeout(countdown(){}, 1000);
+// );
 
