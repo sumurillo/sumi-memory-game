@@ -1,25 +1,32 @@
 /*----- app's state (variables) -----*/
-const boardEl = document.getElementById('board');
 const startBtn = document.getElementById('button1');
 const resetBtn = document.getElementById('button2');
 
-//mapping individual cards to the array
-let .card1= choices[0];
-let .card2 = choices[1];
-let .card3 = choices[2];
-let .card4 = choices[3];
-let .card5 = choices[4];
-let .card6 = choices[5];
-let .card7 = choices[6];
-let .card8 = choices[7];
-let .card9 = choices[8];
-let .card10 = choices[9];
-let .card11 = choices[10];
-let .card12 = choices[11];
+const cards = document.querySelectorAll('.container');
 
 //matching colors
-let choices = ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue', 'blue', 'orange', 'orange', 'aqua', 'aqua'];
-// let gameArr = [];
+let randomColors= ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue', 'blue', 'orange', 'orange', 'aqua', 'aqua'];
+
+
+//mapping individual cards to the array
+let card1 = document.getElementById('r1c1')
+let card2 = document.getElementById('r1c2')
+let card3 = document.getElementById('r1c3')
+let card4 = document.getElementById('r1c4')
+let card5 = document.getElementById('r2c1')
+let card6 = document.getElementById('r2c2')
+let card7 = document.getElementById('r2c3')
+let card8 = document.getElementById('r2c4')
+let card9 = document.getElementById('r3c1')
+let card10 = document.getElementById('r3c2')
+let card11 = document.getElementById('r3c3')
+let card12 = document.getElementById('r3c4')
+
+
+function init () {
+
+};
+
 
 /*----- cached element references -----*/
 
@@ -28,64 +35,63 @@ startBtn.addEventListener('click', countdown);
 
 /*----- functions -----*/
 
-Init ();
 	
 card1.onclick = function() {
-	card1.style.backgroundColor = "red";
+	card1.style.backgroundColor = randomColors[0];
 }
 card2.onclick = function() {
-	card2.style.backgroundColor = "red";
+	card2.style.backgroundColor = randomColors[1];
 }
 card3.onclick = function() {
-	card3.style.backgroundColor = "purple";
+	card3.style.backgroundColor = randomColors[2];
 }
 card4.onclick = function() {
-	card4.style.backgroundColor = "purple";
+	card4.style.backgroundColor = randomColors[3];
 }
 card5.onclick = function() {
-	card5.style.backgroundColor = "blue";
+	card5.style.backgroundColor = randomColors[4];
 }
 card6.onclick = function() {
-	card6.style.backgroundColor = "blue";
+	card6.style.backgroundColor = randomColors[5];
 }
 card7.onclick = function() {
-	card7.style.backgroundColor = "green";
+	card7.style.backgroundColor = randomColors[6];
 }
 card8.onclick = function() {
-	card8.style.backgroundColor = "green";
+	card8.style.backgroundColor = randomColors[7];
 }
 card9.onclick = function() {
-	card9.style.backgroundColor = "orange";
+	card9.style.backgroundColor = randomColors[8];
 }
 card10.onclick = function() {
-	card10.style.backgroundColor = "orange";
+	card10.style.backgroundColor = randomColors[9];
 }
 card11.onclick = function() {
-	card11.style.backgroundColor = "aqua";
+	card11.style.backgroundColor = randomColors[10];
 }
 card12.onclick = function() {
-	card12.style.backgroundColor = "aqua";
+	card12.style.backgroundColor = randomColors[11];
 }
 
 
 //shuffle array function
-function shuffle(cards) {
-	let currentIndex = choices.length,  randomIndex;
+function shuffle(randomColors) {
+	let currentIndex = randomColors.length,  randomIndex;
   
 	while (currentIndex != 0) {
 	  randomIndex = Math.floor(Math.random() * currentIndex); //math.floor and math.random from w3
 	  currentIndex--;
   
 	  //swap it with the current element.
-	  [cards[currentIndex], cards[randomIndex]] = 
-	  [	cards[randomIndex], cards[currentIndex]];
+	  [randomColors[currentIndex], randomColors[randomIndex]] = 
+	  [	randomColors[randomIndex], randomColors[currentIndex]];
 	}
-	return cards;
+	return randomColors;
   }
 
-	shuffle(choices);
-	gameArr.push(choices);
-	console.log(gameArr);
+	shuffle(randomColors);
+	// gameArr.push(choices);
+	// console.log(gameArr);
 
 //timer cited from stack overflow by James McDowell
 let timeLeft = 30;
