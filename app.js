@@ -18,6 +18,21 @@ let card12 = document.getElementById('r3c4')
 
 let choices = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]; //choices to match
 
+const cardsMatch = [
+	{card1: choices[0]}, 
+	{card2: choices[1]},
+	{card3: choices[2]},
+	{card4: choices[3]},
+	{card5: choices[4]},
+	{card6: choices[5]},
+	{card7: choices[6]},
+	{card8: choices[7]},
+	{card9: choices[8]},
+	{card10: choices[9]},
+	{card11: choices[10]},
+	{card12: choices[11]},
+]
+
 
 /*----- variables-----*/
 
@@ -29,7 +44,6 @@ let gameArr = [];
 
 
 startBtn.addEventListener('click', countdown);
-// resetBtn.addEventListener('click', resetTimer);
 
 /*----- functions -----*/
 
@@ -73,21 +87,21 @@ card12.onclick = function() {
 
 
 //shuffle array function
-function shuffle(choices) {
-	let currentIndex = choices.length,  randomIndex;
+function shuffle(cards) {
+	let currentIndex = cards.length,  randomIndex;
   
 	while (currentIndex != 0) {
 	  randomIndex = Math.floor(Math.random() * currentIndex); //math.floor and math.random from w3
 	  currentIndex--;
   
 	  // And swap it with the current element.
-	  [choices[currentIndex], choices[randomIndex]] = 
-	  [	choices[randomIndex], choices[currentIndex]];
+	  [cards[currentIndex], cards[randomIndex]] = 
+	  [	cards[randomIndex], cards[currentIndex]];
 	}
-	return choices;
+	return cards;
   }
 
-	shuffle(choices);
+	shuffle(cardsMatch);
 	gameArr.push(choices);
 	console.log(gameArr);
 
@@ -101,4 +115,10 @@ function countdown() {
 		setTimeout(countdown, 1000);
 	}
 };
+
+//reset timer
+button2.onClick(
+    clearTimeout(timeLeft);
+    timeLeft = setTimeout(countdown(){}, 1000);
+);
 
