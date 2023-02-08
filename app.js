@@ -3,40 +3,23 @@ const boardEl = document.getElementById('board');
 const startBtn = document.getElementById('button1');
 const resetBtn = document.getElementById('button2');
 
-let card1 = document.getElementById('r1c1');
-let card2 = document.getElementById('r1c2');
-let card3 = document.getElementById('r1c3');
-let card4 = document.getElementById('r1c4');
-let card5 = document.getElementById('r2c1');
-let card6 = document.getElementById('r2c2');
-let card7 = document.getElementById('r2c3');
-let card8 = document.getElementById('r2c4');
-let card9 = document.getElementById('r3c1');
-let card10 = document.getElementById('r3c2');
-let card11 = document.getElementById('r3c3');
-let card12 = document.getElementById('r3c4')
+//mapping individual cards to the array
+let .card1= choices[0];
+let .card2 = choices[1];
+let .card3 = choices[2];
+let .card4 = choices[3];
+let .card5 = choices[4];
+let .card6 = choices[5];
+let .card7 = choices[6];
+let .card8 = choices[7];
+let .card9 = choices[8];
+let .card10 = choices[9];
+let .card11 = choices[10];
+let .card12 = choices[11];
 
-let choices = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]; //choices to match
-
-const cardsMatch = [
-	{card1: choices[0]}, 
-	{card2: choices[1]},
-	{card3: choices[2]},
-	{card4: choices[3]},
-	{card5: choices[4]},
-	{card6: choices[5]},
-	{card7: choices[6]},
-	{card8: choices[7]},
-	{card9: choices[8]},
-	{card10: choices[9]},
-	{card11: choices[10]},
-	{card12: choices[11]},
-]
-
-
-/*----- variables-----*/
-
-let gameArr = [];
+//matching colors
+let choices = ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue', 'blue', 'orange', 'orange', 'aqua', 'aqua'];
+// let gameArr = [];
 
 /*----- cached element references -----*/
 
@@ -45,6 +28,7 @@ startBtn.addEventListener('click', countdown);
 
 /*----- functions -----*/
 
+Init ();
 	
 card1.onclick = function() {
 	card1.style.backgroundColor = "red";
@@ -86,13 +70,13 @@ card12.onclick = function() {
 
 //shuffle array function
 function shuffle(cards) {
-	let currentIndex = cards.length,  randomIndex;
+	let currentIndex = choices.length,  randomIndex;
   
 	while (currentIndex != 0) {
 	  randomIndex = Math.floor(Math.random() * currentIndex); //math.floor and math.random from w3
 	  currentIndex--;
   
-	  // And swap it with the current element.
+	  //swap it with the current element.
 	  [cards[currentIndex], cards[randomIndex]] = 
 	  [	cards[randomIndex], cards[currentIndex]];
 	}
@@ -104,7 +88,7 @@ function shuffle(cards) {
 	console.log(gameArr);
 
 //timer cited from stack overflow by James McDowell
-timeLeft = 30;
+let timeLeft = 30;
 
 function countdown() {
 	timeLeft--;
@@ -114,9 +98,4 @@ function countdown() {
 	}
 };
 
-//reset timer
-// button2.onClick(
-//     clearTimeout(timeLeft);
-//     timeLeft = setTimeout(countdown(){}, 1000);
-// );
 
