@@ -26,15 +26,22 @@ h4 {
     margin: 30px;
 }
 
-#board {
+.container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 2fr); 
     grid-auto-rows: repeat(100px, auto); 
 }
 
-#board > div{
+.container > div{
     background: black;
     height: 150px;
     width: 150px;
     margin: 10px;
+}
+
+#r1c1 {
+    background-color: red;
+}
+.one{
+    background: red;
 }
