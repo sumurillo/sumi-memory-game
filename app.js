@@ -39,17 +39,7 @@ let cardsArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9, c
 startBtn.addEventListener('click', countdown);
 
 /*----- functions -----*/
-function init () {
-
-};
-
-
 function toFindMatches(firstCard, secondCard) {
-	// 	const filteredElements = randomColors.filter(item => {
-		// 		if (filteredElements.has(item)) 
-		// 			return
-		// 		}
-		// 	})
 		if (firstCard.style.backgroundColor === secondCard.style.backgroundColor) {
 			firstCard.onclick=null;
 			secondCard.onclick=null;
