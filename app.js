@@ -4,6 +4,11 @@ const resetBtn = document.getElementById('button2');
 
 const cards = document.querySelectorAll('.container');
 
+let firstCard = evt.target;//first card picked
+let secondCard = null;//second card picked
+
+let counter = 0;//counter for 'click' max per choice
+
 //matching colors
 let randomColors= ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue', 'blue', 'orange', 'orange', 'aqua', 'aqua'];
 
@@ -23,20 +28,26 @@ let card10 = document.getElementById('r3c2')
 let card11 = document.getElementById('r3c3')
 let card12 = document.getElementById('r3c4')
 
+// let cardsArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12];
+ 
+// //comparing two arrays and matching colors by the array
+// function checkForMatch (randomColors,cardsArr) {
+// 	randomColors.forEach((e1)=> cardsArr.forEach((e2) =>
+// 		{if(e1 === e2){
+// 			console.log('match')
+// 		}
+// 	}));
+// };
 
-function init () {
-
-};
-
-let firstCard = null;
-let secondCard = null;
 
 
 /*----- cached element references -----*/
 
 startBtn.addEventListener('click', countdown);
 
-
+let onClick () {
+	
+}
 //cards changing color on click while iterating through the array	
 card1.onclick = function() {
 	card1.style.backgroundColor = randomColors[0];
@@ -78,22 +89,27 @@ card12.onclick = function() {
 
 /*----- functions -----*/
 
+function init () {
+
+};
+
+
 //shuffle function to shuffle colors in array
 function shuffle(randomColors) {
 	let currentIndex = randomColors.length,  randomIndex;
 	
 	while (currentIndex != 0) {
-	  randomIndex = Math.floor(Math.random() * currentIndex); //math.floor and math.random from w3
-	  currentIndex--;
-  
-	  //swap it with the current element.
-	  [randomColors[currentIndex], randomColors[randomIndex]] = 
-	  [randomColors[randomIndex], randomColors[currentIndex]];
+		randomIndex = Math.floor(Math.random() * currentIndex); //math.floor and math.random from w3
+		currentIndex--;
+		
+		//swap it with the current element.
+		[randomColors[currentIndex], randomColors[randomIndex]] = 
+		[randomColors[randomIndex], randomColors[currentIndex]];
 	}
 	return randomColors;
-  }
+}
 
-	shuffle(randomColors);
+shuffle(randomColors);
 
 
 //timer cited from stack overflow by James McDowell
