@@ -8,7 +8,8 @@ const cards = document.querySelectorAll('.container');
 let randomColors= ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue', 'blue', 'orange', 'orange', 'aqua', 'aqua'];
 
 
-//mapping individual cards to the array
+//mapping individual cards to the array 
+//r: row; c: card
 let card1 = document.getElementById('r1c1')
 let card2 = document.getElementById('r1c2')
 let card3 = document.getElementById('r1c3')
@@ -27,15 +28,16 @@ function init () {
 
 };
 
+let firstCard = null;
+let secondCard = null;
+
 
 /*----- cached element references -----*/
 
 startBtn.addEventListener('click', countdown);
 
 
-/*----- functions -----*/
-
-	
+//cards changing color on click while iterating through the array	
 card1.onclick = function() {
 	card1.style.backgroundColor = randomColors[0];
 }
@@ -74,34 +76,41 @@ card12.onclick = function() {
 }
 
 
-//shuffle array function
+/*----- functions -----*/
+
+//shuffle function to shuffle colors in array
 function shuffle(randomColors) {
 	let currentIndex = randomColors.length,  randomIndex;
-  
+	
 	while (currentIndex != 0) {
 	  randomIndex = Math.floor(Math.random() * currentIndex); //math.floor and math.random from w3
 	  currentIndex--;
   
 	  //swap it with the current element.
 	  [randomColors[currentIndex], randomColors[randomIndex]] = 
-	  [	randomColors[randomIndex], randomColors[currentIndex]];
+	  [randomColors[randomIndex], randomColors[currentIndex]];
 	}
 	return randomColors;
   }
 
 	shuffle(randomColors);
-	// gameArr.push(choices);
-	// console.log(gameArr);
+
 
 //timer cited from stack overflow by James McDowell
 let timeLeft = 30;
 
 function countdown() {
 	timeLeft--;
-	document.getElementById("seconds").innerHTML = String( timeLeft );
+	document.getElementById("timer").innerHTML = String( timeLeft );
 	if (timeLeft > 0) {
 		setTimeout(countdown, 1000);
 	}
 };
 
 
+
+function matchCard () {
+	if (firstCard.cards.childElement === secondCard.cards.childElement) {
+		console.log("match");
+	}
+}
