@@ -4,8 +4,8 @@ const resetBtn = document.getElementById('button2');
 
 const cards = document.querySelectorAll('.container');
 
-let firstCard = evt.target;//first card picked
-let secondCard = null;//second card picked
+let firstPicked= null;//first card picked
+let secondPicked = null;//second card picked
 
 let counter = 0;//counter for 'click' max per choice
 
@@ -28,62 +28,208 @@ let card10 = document.getElementById('r3c2')
 let card11 = document.getElementById('r3c3')
 let card12 = document.getElementById('r3c4')
 
-// let cardsArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12];
- 
-// //comparing two arrays and matching colors by the array
-// function checkForMatch (randomColors,cardsArr) {
-// 	randomColors.forEach((e1)=> cardsArr.forEach((e2) =>
-// 		{if(e1 === e2){
-// 			console.log('match')
-// 		}
-// 	}));
-// };
+let cardsArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12];
 
+function toFindMatches(firstCard, secondCard) {
+// 	const filteredElements = randomColors.filter(item => {
+// 		if (filteredElements.has(item)) {
+// 			return
+// 		}
+// 	})
+	if (firstCard === secondCard) {
+		console.log('found a match');
+	} else {
+		console.log('not match')
+	}
+}
 
 
 /*----- cached element references -----*/
 
 startBtn.addEventListener('click', countdown);
 
-let onClick () {
-	
-}
+
 //cards changing color on click while iterating through the array	
-card1.onclick = function() {
-	card1.style.backgroundColor = randomColors[0];
+card1.onclick = function(evt) {
+	evt.target.style.backgroundColor = randomColors[0];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	console.log(counter);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card2.onclick = function() {
+card2.onclick = function(evt) {
 	card2.style.backgroundColor = randomColors[1];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card3.onclick = function() {
+card3.onclick = function(evt) {
 	card3.style.backgroundColor = randomColors[2];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card4.onclick = function() {
+card4.onclick = function(evt) {
 	card4.style.backgroundColor = randomColors[3];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card5.onclick = function() {
-	card5.style.backgroundColor = randomColors[4];
+card5.onclick = function(evt) {
+card5.style.backgroundColor = randomColors[4];
+console.log(firstPicked, secondPicked, evt.target);
+toFindMatches(firstPicked, secondPicked);
+if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card6.onclick = function() {
+card6.onclick = function(evt) {
 	card6.style.backgroundColor = randomColors[5];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card7.onclick = function() {
+card7.onclick = function(evt) {
 	card7.style.backgroundColor = randomColors[6];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card8.onclick = function() {
+card8.onclick = function(evt) {
 	card8.style.backgroundColor = randomColors[7];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card9.onclick = function() {
+card9.onclick = function(evt) {
 	card9.style.backgroundColor = randomColors[8];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card10.onclick = function() {
+card10.onclick = function(evt) {
 	card10.style.backgroundColor = randomColors[9];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card11.onclick = function() {
+card11.onclick = function(evt) {
 	card11.style.backgroundColor = randomColors[10];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
-card12.onclick = function() {
+card12.onclick = function(evt) {
 	card12.style.backgroundColor = randomColors[11];
+	console.log(firstPicked, secondPicked, evt.target);
+	toFindMatches(firstPicked, secondPicked);
+	if (counter === 0) {
+		firstPicked = evt.target.style.backgroundColor;
+		console.log('first card')
+		counter++
+		console.log(counter);
+	} else {
+		secondPicked = evt.target.style.backgroundColor;
+		console.log('second card')
+		counter = 0;
+	}
 }
 
 
