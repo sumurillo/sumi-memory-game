@@ -2,9 +2,12 @@
 
 <Memory>
 
-This memory game is built to test your memory to match 12 cards to their corresponding colors within a 30 second time frame. I chose it thinking I could manage building a simple game with minimal issues with my new found knowledge. Unfortunately I was wrong. 
+This memory game is built to test your memory to match 12 cards to their corresponding colors within a 30 second time frame. The cards being faced down initially and "flipped" to a color once clicked and just having to match colors together.
+
+<personal background>
+ I chose this game thinking I could manage building a simple game with minimal issues with my new found knowledge. Unfortunately I was wrong. 
 I ended up going with the route of clicking on a grid rather than creating objects of cards, and due to my habitual organization methods, it caused me to create functions on a global scope rather than creating an initial function and building from there.
-This caused so much more time, effort, and frustration one how to make the code the cleanest or more efficient. Definitely not a DRY code yet but, it worked out.
+This caused so much more time, effort, and frustration on how to make the code the cleanest or more efficient. Definitely not a DRY code yet but, it worked out.
 
 <Technologies Used>
 Technologies that were used are HTML5, CSS, and JavaScript with the assistance of google and my amazingly patient instructor.
