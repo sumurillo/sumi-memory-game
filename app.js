@@ -12,8 +12,8 @@ let timeLeft = 30; //countdown seconds
 let countdownTimer = null;
 
 //color choices that need to match
-let randomColors= ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue',
-'blue', 'orange', 'orange', 'aqua', 'aqua'];
+let randomColors= ['lightseagreen', 'lightseagreen', 'plum', 'plum', 'lightgreen', 'lightgreen', 'lightblue',
+'lightblue', 'lightcoral', 'lightcoral', 'mediumpurple', 'mediumpurple'];
 
 
 //mapping individual cards to the array 

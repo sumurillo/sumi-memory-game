@@ -8,25 +8,48 @@ body {
     align-items: center;
     margin: 0;
     height: 100vh;
+    background-color: rgb(173, 170, 207);
 }
 
 h1 {
-    color: purple ;
+    color: rgb(250, 223, 241);
+    font-family: 'Coiny', cursive;
+    font-size: 75px;
     margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+#message {
+    font-size: 40px;
+    font-family: 'Poiret One', cursive;
+    margin-top: 0;
     margin-bottom: 5px;
 }
 
-h4 {
-    margin-top: 0;
-    margin-bottom: 30px;
+#button1, #button2 {
+    align-content: center;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Poiret One', cursive;
+    background-color: rgb(224, 254, 243);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;;
 }
 
-#button1, #clock {
+#button1, #button2, #clock {
     display: inline;
     margin: 30px;
+    justify-content: space-evenly;
 }
 
-.container {
+#clock {
+    font-size: 50px;
+    font-family: 'Poiret One', cursive;
+}
+
+.container{
     display: grid;
     grid-template-columns: repeat(4, 2fr); 
     grid-auto-rows: repeat(100px, auto); 
@@ -37,4 +60,7 @@ h4 {
     height: 150px;
     width: 150px;
     margin: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: 6px solid rgb(250, 223, 241);
 }
