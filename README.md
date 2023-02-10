@@ -7,7 +7,7 @@ I ended up going with the route of clicking on a grid rather than creating objec
 This caused so much more time, effort, and frustration one how to make the code the cleanest or more efficient. Definitely not a DRY code yet but, it worked out.
 
 <Technologies Used>
-Technologies that were used are HTML, CSS, and JavaScript with the assistance of google and my amazingly patient instructor.
+Technologies that were used are HTML5, CSS, and JavaScript with the assistance of google and my amazingly patient instructor.
 
 <Getting Started>
 
@@ -16,10 +16,13 @@ Link to the game: https://sumurillo.github.io/sumi-memory-game/
 Here's some snippets of the game with description of 'how to play'.
 
 A simple two button game with the interactive "cards". To start, you press the start button which initiates the timer and start clicking on each block and try to match before the time runs out. 
+
 <img src="./images/inplay.png" width="600">
 This is what the game would look like while in play.
+
 <img src="./images/you lose.png" width="600">
 If you don't match all the cards before the time runs out, it will turn the subheading message to 'you lose!'
+
 <img src="./images/you win.png" width="600">
 If you successfully match all the cards to their corresponding colors before the time ends, the subheading message will read 'you win!'
 
