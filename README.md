@@ -1,18 +1,18 @@
 # sumi-memory-game
 
-#Memory
+Memory
 
 This memory game is built to test your memory to match 12 cards to their corresponding colors within a 30 second time frame. The cards being faced down initially and "flipped" to a color once clicked and just having to match colors together.
 
-####Personal Background
+Personal Background
  I chose this game thinking I could manage building a simple game with minimal issues with my new found knowledge. Unfortunately I was wrong. 
 I ended up going with the route of clicking on a grid rather than creating objects of cards, and due to my habitual organization methods, it caused me to create functions on a global scope rather than creating an initial function and building from there.
 This caused so much more time, effort, and frustration on how to make the code the cleanest or more efficient. Definitely not a DRY code yet but, it worked out.
 
-###Technologies Used
+Technologies Used
 Technologies that were used are HTML5, CSS, and JavaScript with the assistance of google and my amazingly patient instructor.
 
-###Getting Started
+Getting Started
 
 Link to the game: https://sumurillo.github.io/sumi-memory-game/
 
@@ -31,5 +31,5 @@ If you successfully match all the cards to their corresponding colors before the
 
 After the game is over, if you want to play again, just click the 'play again' button and it will refresh the page. Because my functions were all global, it would been much more complicated to fix from where I was already at with the amount of time I had left. So, simple solution: reload the page.
 
-###Future Plans
+Future Plans
 I will definitely improve the game over time with the visuals. I want to add more dynamics to the page with images and color, put a better countdown clock, and maybe some animations. But most importantly, I want to refactor the code to make it DRY.
