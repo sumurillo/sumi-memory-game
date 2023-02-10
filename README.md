@@ -15,7 +15,7 @@ Link to the game:
 
 Here's some snippets of the game with description of 'how to play'.
 
-<img src=“./images/initial.png”  width=“600">
+<img src=“./images/initial.png”  width="600">
 This is the game initially when the page loads. A simple two button game with the interactive "cards". To start, you press the start button which initiates the timer and start clicking on each block and try to match before the time runs out. 
 <img src="./images/inplay.png" width="600">
 This is what the game would look like while in play.
