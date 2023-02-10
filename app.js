@@ -1,9 +1,7 @@
-/*----- app's state (variables) -----*/
 const message = document.getElementById('message');
 const startBtn = document.getElementById('button1');
 const resetBtn = document.getElementById('button2');
 const cards = document.querySelectorAll('.container');
-
 let firstPicked= null;//first card picked
 let secondPicked = null;//second card picked
 let counter = 0;//counter for 'click' max per choice
@@ -14,7 +12,6 @@ let countdownTimer = null;
 //color choices that need to match
 let randomColors= ['lightseagreen', 'lightseagreen', 'plum', 'plum', 'lightgreen', 'lightgreen', 'lightblue',
 'lightblue', 'lightcoral', 'lightcoral', 'mediumpurple', 'mediumpurple'];
-
 
 //mapping individual cards to the array 
 //r: row; c: card
@@ -31,12 +28,8 @@ let card10 = document.getElementById('r3c2')
 let card11 = document.getElementById('r3c3')
 let card12 = document.getElementById('r3c4')
 
-/*----- cached element references -----*/
-
 startBtn.addEventListener('click', countdown); //button to start countdown 
 resetBtn.addEventListener('click', refresh);
-
-/*----- functions -----*/
 
 //function for matches and declaring win/lose
 function toFindMatches(firstCard, secondCard) {
@@ -55,7 +48,6 @@ function toFindMatches(firstCard, secondCard) {
 			console.log('not match');
 		}
 }
-
 
 //cards changing color on click while iterating through the array	
 //click count function
@@ -240,7 +232,6 @@ card12.onclick = function(evt) {
 		toFindMatches(firstPicked, secondPicked);
 	}
 }
-
 //shuffle function to shuffle colors in array
 //math.floor and math.random from w3
 function shuffle(randomColors) {
@@ -256,11 +247,9 @@ function shuffle(randomColors) {
 	}
 	return randomColors;
 }
-
 shuffle(randomColors);
 
 //timer cited from stack overflow by James McDowell
-
 function countdown() {
 	timeLeft--;
 	document.getElementById("timer").innerHTML = String( timeLeft );
@@ -270,7 +259,6 @@ function countdown() {
 		message.innerHTML = "You lose!"
 	}
 };
-
 function refresh () {
 	document.location.reload();
 }

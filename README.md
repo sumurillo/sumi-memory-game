@@ -11,7 +11,7 @@ Technologies that were used are HTML, CSS, and JavaScript with the assistance of
 
 <Getting Started>
 
-Link to the game: 
+Link to the game: https://sumurillo.github.io/sumi-memory-game/
 
 Here's some snippets of the game with description of 'how to play'.
 
