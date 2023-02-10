@@ -15,9 +15,8 @@ Link to the game: https://sumurillo.github.io/sumi-memory-game/
 
 Here's some snippets of the game with description of 'how to play'.
 
-<img src=“./images/initial.png”  width="600">
-This is the game initially when the page loads. A simple two button game with the interactive "cards". To start, you press the start button which initiates the timer and start clicking on each block and try to match before the time runs out. 
-<img src="./images/initial.png" width="600">
+A simple two button game with the interactive "cards". To start, you press the start button which initiates the timer and start clicking on each block and try to match before the time runs out. 
+<img src="./images/inplay.png" width="600">
 This is what the game would look like while in play.
 <img src="./images/you lose.png" width="600">
 If you don't match all the cards before the time runs out, it will turn the subheading message to 'you lose!'
