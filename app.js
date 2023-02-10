@@ -2,17 +2,18 @@
 const message = document.getElementById('message');
 const startBtn = document.getElementById('button1');
 const resetBtn = document.getElementById('button2');
-
 const cards = document.querySelectorAll('.container');
 
 let firstPicked= null;//first card picked
 let secondPicked = null;//second card picked
-
 let counter = 0;//counter for 'click' max per choice
-let matchCount = 0;
-let timeLeft = 30;
-//matching colors
-let randomColors= ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue', 'blue', 'orange', 'orange', 'aqua', 'aqua'];
+let matchCount = 0;//counter for 'clicks' 
+let timeLeft = 30; //countdown seconds
+let countdownTimer = null;
+
+//color choices that need to match
+let randomColors= ['red', 'red', 'purple', 'purple', 'green', 'green', 'blue',
+'blue', 'orange', 'orange', 'aqua', 'aqua'];
 
 
 //mapping individual cards to the array 
@@ -30,21 +31,21 @@ let card10 = document.getElementById('r3c2')
 let card11 = document.getElementById('r3c3')
 let card12 = document.getElementById('r3c4')
 
-let cardsArr = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12];
-
-
-
 /*----- cached element references -----*/
 
-startBtn.addEventListener('click', countdown);
+startBtn.addEventListener('click', countdown); //button to start countdown 
+resetBtn.addEventListener('click', refresh);
 
 /*----- functions -----*/
+
+//function for matches and declaring win/lose
 function toFindMatches(firstCard, secondCard) {
 		if (firstCard.style.backgroundColor === secondCard.style.backgroundColor) {
 			firstCard.onclick=null;
 			secondCard.onclick=null;
 			matchCount++
 			if (matchCount === 6) {
+				clearInterval(countdownTimer);
 				message.innerHTML = "You win!";
 			}
 			console.log('match');
@@ -240,18 +241,13 @@ card12.onclick = function(evt) {
 	}
 }
 
-function results() {
-	if (cards === randomColors) {
-		console.log('winner!')
-	}
-}
-
 //shuffle function to shuffle colors in array
+//math.floor and math.random from w3
 function shuffle(randomColors) {
 	let currentIndex = randomColors.length,  randomIndex;
 	
 	while (currentIndex != 0) {
-		randomIndex = Math.floor(Math.random() * currentIndex); //math.floor and math.random from w3
+		randomIndex = Math.floor(Math.random() * currentIndex); 
 		currentIndex--;
 		
 		//swap it with the current element.
@@ -263,17 +259,18 @@ function shuffle(randomColors) {
 
 shuffle(randomColors);
 
-
-
 //timer cited from stack overflow by James McDowell
 
 function countdown() {
 	timeLeft--;
 	document.getElementById("timer").innerHTML = String( timeLeft );
 	if (timeLeft > 0) {
-		setTimeout(countdown, 1000);
+		countdownTimer = setTimeout(countdown, 1000);
 	} else {
 		message.innerHTML = "You lose!"
 	}
 };
 
+function refresh () {
+	document.location.reload();
+}
