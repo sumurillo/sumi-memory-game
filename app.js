@@ -44,7 +44,7 @@ function toFindMatches(firstCard, secondCard) {
 			console.log('match');
 		} else {
 			setTimeout(() => {firstCard.style.backgroundColor = 'black';
-			secondCard.style.backgroundColor = 'black'}, 1000);
+			secondCard.style.backgroundColor = 'black'}, 300);
 			console.log('not match');
 		}
 }
